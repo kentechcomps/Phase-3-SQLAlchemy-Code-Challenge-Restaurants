@@ -1,0 +1,76 @@
+# Phase-3-SQLAlchemy-Code-Challenge-Restaurants
+
+
+This project is a Python application that simulates a restaurant review domain using SQLAlchemy, a popular Object-Relational Mapping (ORM) library for Python. The application consists of three main models: `Restaurant`, `Review`, and `Customer`, each representing a key entity in the restaurant review system. These models are interconnected through various relationships to capture the complex interactions between customers, restaurants, and reviews.
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Database Schema](#database-schema)
+- [Features](#features)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Getting Started
+
+To get started with this project, you should have the following prerequisites installed on your system:
+
+- Python 3.x
+- SQLAlchemy
+- SQLite (for database storage)
+
+Clone the project repository to your local machine:
+
+git clone git@github.com:kentechcomps/Phase-3-SQLAlchemy-Code-Challenge-Restaurants.git
+cd Restaurants_with_sqlalchemy
+
+`~Run pipenv install`
+
+## Project Structure
+
+The project structure is organized as follows:
+
+- `models.py`: Contains the SQLAlchemy models for `Restaurant`, `Review`, and `Customer`.
+- `seeds.py`: Provides seed data to populate the database for testing.
+- `README.md`: The project's README file.
+
+## Database Schema
+
+The database schema consists of three tables:
+
+- `restaurants`: Stores information about restaurants, including their name and price.
+- `customers`: Contains details about customers, such as their first name and last name.
+- `reviews`: Represents reviews submitted by customers for specific restaurants. This table includes a  -`star_rating` column to store review ratings.
+
+The relationships between these tables are defined as follows:
+
+- `Restaurant` has a one-to-many relationship with `Review` (one restaurant can have many reviews).
+- `Customer` also has a one-to-many relationship with `Review` (one customer can have many reviews).
+- `Review` belongs to both `Restaurant` and `Customer`.
+
+## Features
+
+This project demonstrates several features related to restaurant reviews:
+
+- Creating and querying restaurant, customer, and review objects using SQLAlchemy.
+- Establishing relationships between `Restaurant`, `Customer`, and `Review`.
+- Retrieving restaurant reviews and customers who reviewed a restaurant.
+- Getting reviews left by a customer and restaurants reviewed by a customer.
+- Implementing aggregate and relationship methods, such as calculating a customer's favorite restaurant and adding/deleting reviews.
+
+## Usage
+
+To use the project, you can create instances of `Restaurant`, `Customer`, and `Review` classes and manipulate the data as needed. You can also implement custom methods for your specific use cases, such as calculating statistics or generating reports.
+
+The provided `seeds.py` file allows you to create sample data to test your models and relationships. You can customize the seed data to match your requirements.
+
+
+## Contributors
+
+Kennedy Mutuku
+For more info contact : https://github.com/kentechcomps/Phase-3-SQLAlchemy-Code-Challenge-Restaurants
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -46,7 +46,7 @@ if __name__ == '__main__':
                 # if restaurant not in customer.restaurants:
                 #     customer.reviews.append(review)
                 #     session.commit()
-                reviews.append(review)
+                # reviews.append(review)
                 
             
                 session.add(review)

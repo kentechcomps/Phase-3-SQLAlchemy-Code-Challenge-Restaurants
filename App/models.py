@@ -43,6 +43,7 @@ class Customer(Base):
     id = Column(Integer, primary_key=True)
     first_name = Column(String)
     last_name = Column(String)
+    
     reviews=relationship('Review',back_populates='customer')
     restaurants=association_proxy('reviews','restaurant',creator=lambda gm: Review(restaurant=gm))
     
