@@ -44,26 +44,26 @@ class Review(Base):
         return self.restaurant
 
 
-    engine = create_engine('sqlite:///Restaurant.db')
-    Base.metadata.create_all(engine)
+#     engine = create_engine('sqlite:///Restaurant.db')
+#     Base.metadata.create_all(engine)
 
-# Create a session
-Session = sessionmaker(bind=engine_from_config)
-session = Session()
+# # Create a session
+# Session = sessionmaker(bind=engine_from_config)
+# session = Session()
 
-# Seed data for restaurants
-fake = Faker()
+# # Seed data for restaurants
+# fake = Faker()
 
 
-restaurant1 = Restaurant(name='Restaurant1', price=2)
-restaurant2 = Restaurant(name='Restaurant2', price=3)
+# restaurant1 = Restaurant(name='Restaurant1', price=2)
+# restaurant2 = Restaurant(name='Restaurant2', price=3)
 
-# Seed data for customers
-customer1 = Customer(first_name='John', last_name='Doe')
-customer2 = Customer(first_name='Jane', last_name='Smith')
+# # Seed data for customers
+# customer1 = Customer(first_name='John', last_name='Doe')
+# customer2 = Customer(first_name='Jane', last_name='Smith')
 
-# Add data to the session
-session.bulk_save_objects([restaurant1, restaurant2, customer1, customer2])
+# # Add data to the session
+# session.bulk_save_objects([restaurant1, restaurant2, customer1, customer2])
 
-# Commit the changes
-session.commit()
+# # Commit the changes
+# session.commit()
